@@ -117,7 +117,7 @@ const displayLessons = (lessons) => {
                     <div class="card-body">
                       <h2 class="text-center text-3xl font-bold poppins-regular mb-6">${lesson.word}</h2>
                       <p class="font-medium text-xl poppins-regular text-center mb-6">Meaning /Pronounciation</p>
-                      <p class="font-semibold text-3xl hind-siliguri text-center text-[#18181B] mb-6">"${lesson.meaning ? `${lesson.meaning}` : `কোন অর্থ পাওয়া যায় নি /${lesson.pronunciation}`}"</p>
+                      <p class="font-semibold text-3xl hind-siliguri text-center text-[#18181B] mb-6">"${lesson.meaning ? `${lesson.meaning}/${lesson.pronunciation}` : `কোন অর্থ পাওয়া যায় নি /${lesson.pronunciation}`}"</p>
                       <div class="flex justify-between">
                         <button  onclick="loadLessonDetails(${lesson.id})" class="btn bg-[#1A91FF10]"><i class="fa-solid fa-circle-info fa-lg"></i></button>
                         <button onclick="pronounceWord('${lesson.word}')" class="btn bg-[#1A91FF10]"><i class="fa-solid fa-volume-high fa-lg"></i></button>
