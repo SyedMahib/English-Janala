@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English-Janala</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/b740202a2d.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <style>
+        .hind-siliguri{
+            font-family: "Hind Siliguri", sans-serif;
+        }
+
+        .poppins-regular{
+            font-family: "Poppins", sans-serif;
+        }
+
+        .active{
+            background: #422AD5;
+            color: white;
+        }
+
+        .active i{
+            color: white;
+        }
+
+        .nav-btn:hover i {
+            color: white; 
+        }
+    </style>
+</head>
+
+<body>
+    <header id="navbar" class="sticky top-0 z-50">
+        <nav class="bg-gray-100 border-b-1 border-[#C6BDBD]">
+            <div class="w-11/12 mx-auto flex justify-between items-center p-7">
+                <div>
+                    <h2 class="flex items-center poppins-regular font-semibold text-xl">English <span><img src="./assets/logo.png" alt="logo"></span><span class="hind-siliguri font-normal">জানালা</span></h2>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#FAQ"><button class="btn nav-btn border border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white font-semibold"><i class="fa-solid fa-circle-question text-[#422AD5] hover:text-white text-sm"></i>FAQ</button></a>
+                    <a href="#Learn"><button class="btn nav-btn border border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white font-semibold"><i class="fa-solid fa-book-open text-[#422AD5] hover:text-white text-sm"></i>Learn</button></a>
+                    <button id="log-out" class="btn nav-btn border border-[#422AD5] text-[#422AD5] hover:bg-[#422AD5] hover:text-white font-semibold"><i class="fa-solid fa-right-from-bracket text-[#422AD5] hover:text-white text-sm"></i>Logout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Banner Section -->
+        <section id="banner" class="md:container mx-auto  mt-12">
+            <div class="flex justify-between items-center">
+                <div>
+                    <h1 class="text-5xl font-bold pb-7 poppins-regular"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+                    <p class="hind-siliguri text-2xl font-medium pb-7">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br> আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে <br> যাবে অন্য একটি Level এ</p>
+                    <div class="space-y-5">
+                        <input id="user-name" type="text" placeholder="Enter Your Name" class="input" />
+                        <br>
+                        <input id="login-code" type="text" placeholder="Enter The Login Code Hint(123456)" class="input" />
+                        <br>
+                        <button id="get-started" class="btn bg-[#422AD5] text-white rounded-md">Get Started</button>
+                    </div>
+                </div>
+                <div>
+                    <img src="./assets/hero-student.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <!-- Lets learn Section -->
+
+        <section id="Learn" class="md:container mx-auto mt-40 mb-52 scroll-mt-40">
+            <h1 class="text-4xl font-bold text-center mb-10"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
+            <nav id="lesson-btn-container" class="flex justify-center items-center gap-5 mb-10">
+
+            </nav>
+            <section id="loading" class="text-center py-20 hidden">
+                <span class="loading loading-dots loading-xl"></span>
+
+            </section>
+            <div id="lesson-container" class="md:container mx-auto bg-[#F8F8F8] rounded-3xl grid grid-cols-3 gap-7 p-7">
+                <div class="col-span-full py-16">
+                    <h6 class="font-normal text-sm text-[#79716B] hind-siliguri text-center mb-3">আপনি এখনো কোন Lesson Select করেন নি</h6>
+                    <h2 class="font-medium text-4xl text-[#292524] hind-siliguri text-center">একটি <span class="poppins-regular">Lesson Select</span> করুন।</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+
+        <section id="FAQ" class="md:container mx-auto mb-52 scroll-mt-44">
+            <h1 class="font-bold text-4xl poppins-regular text-center mb-10"><span class="text-[#00BCFF]">Frequently</span> Asked Questions</h1>
+            <div class="collapse collapse-plus bg-base-200 border border-base-300 mb-5">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title font-semibold text-lg poppins-regular">What is the difference between var, let, and const?</div>
+                <div class="collapse-content text-lg text-[#62748E] poppins-regular">var is function scoped. We can reassign a new value to a variable which is created by var. Hoisting occures if we create a variable with var. let is a block scoped. We can reassign a new value to a variebale which is created with let. Hoisting is not possible in let. const is block scoped. It is also read only this means we cannot change the value of a variable which is created with const. Hoisting is not possible in const. </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200 border border-base-300 mb-5">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold text-lg poppins-regular">The difference between map(), forEach(), and filter()</div>
+                <div class="collapse-content text-lg text-[#62748E] poppins-regular">All of these methods can be used with array. These are array methods. We use map() when we need a new array in return. map() method will return something. forEach() does not return anything. We use forEach() method to simply iterate over the array elemnets. filter() method returns a new array with filterd elemnets from the previous array. We use this method to filter out unwanted array elemnets.</div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200 border border-base-300 mb-5">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold text-lg poppins-regular">Explain arrow functions and how they are different from regular functions</div>
+                <div class="collapse-content text-lg text-[#62748E] poppins-regular">The syntax of an arrow function is different from the regular functions. arrow functions uses shorter syntax for example: (params) => expression or (params) => { statements } whereas regular functions have bigger syntax for example: function name(params) { statements }. Arrow functions do not have their own argument object but regular functions have arguments object. Arrow functions inherit the "this" keyword from the surrounding scope but the regular function interits "this" keyword form the global scope.</div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200 border border-base-300 mb-5">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold text-lg poppins-regular">How JavaScript Promises work?</div>
+                <div class="collapse-content text-lg text-[#62748E] poppins-regular">The JvaScript promise works in three ways, they are: Pending,Fulfilled or rejected. If the promise shows pending this means it is in its initial phase not fulfilled nor rejected. if the promise shows fulfilled this means that the operations completed succesfully. If the promise shows rejected this means that the operation is failed and it will thorw an error. Promise provide a structured way to handle asynchronous codes. </div>
+              </div>
+              <div class="collapse collapse-plus bg-base-200 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold text-lg poppins-regular">How closures work in JavaScript?</div>
+                <div class="collapse-content text-lg text-[#62748E] poppins-regular">Clouser in JavaScript allows a function to access variables from its outer scopes even after the outer function has finished its operations. Clouser remembers the environment in which it was created allowing them to access the variables form that environment later.</div>
+              </div>
+        </section>
+
+        <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="leson_details.showModal()">open modal</button> -->
+<dialog id="lesson_details" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box w-11/12 max-w-3xl rounded-3xl">
+    <div id="details-container">
+        
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-[#422AD5] text-white rounded-xl">Complete Learning</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+    </main>
+
+    <footer id="footer" class="border-t-2 border-[#FFEBEB]">
+        <div class="w-11/12 mx-auto flex justify-between items-center p-7">
+            <div>
+                <h2 class="flex items-center poppins-regular font-semibold text-xl">English <span><img src="./assets/logo.png" alt="logo"></span><span class="hind-siliguri font-normal">জানালা</span></h2>
+                <p class="text-xl font-medium hind-siliguri">ইংরেজি শিখুন সহজে</p>
+                <p class="text-lg font-medium poppins-regular">Providing ED-Tech Applications since 2025</p>
+            </div>
+            <div>
+                <p class="font-semibold text-sm poppins-regular mb-4 text-[#18181B]">Follow us</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/syed.mahib.14/" target="_blank"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                    <a href="https://www.youtube.com/@SyedMahib-i8w" target="_blank"><i class="fa-brands fa-youtube fa-lg"></i></a>
+                    <a href="https://www.instagram.com/127.192.7716.nbjoc/" target="_blank"><i class="fa-brands fa-instagram fa-lg"></i></a>
+                    <a href="https://github.com/SyedMahib" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/getStarted.js"></script>
+    <script src="./scripts/logOut.js"></script>
+</body>
+
+</html>
